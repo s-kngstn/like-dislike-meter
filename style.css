@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  border: 2px dotted yellowgreen;
+  height: 25rem; /*for testing*/
+}
+
+.likeDislike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+
+  border: 2px dotted orangered;
+  height: 10rem; /*for testing*/
+}
+
+.likeDislike__like {
+  display: flex;
+  align-items: center;
+
+  margin: 5rem;
+  border: 2px dotted blue;
+}
+
+.likeDislike__dislike {
+  display: flex;
+  align-items: center;
+
+  margin: 5rem;
+  border: 2px dotted red;
+}
+
+button {
+  border: none;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+ion-icon {
+  color: blueviolet;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.2s;
+}
+ion-icon:hover {
+  color: rgb(162, 98, 223);
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+  border: dashed 2px orangered;
+}
+
+.likeBar {
+  content: '';
+  border-top: blue 3px solid;
+  width: 14rem;
+  height: 2rem;
+}
+
+.disLikeBar {
+  content: '';
+  border-top: red 3px solid;
+  width: 16rem;
+  height: 2rem;
+}

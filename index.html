@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Like | Dislike meter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="likeDislike">
+        <div id="like-button" class="likeDislike__like">
+          <button><ion-icon name="thumbs-up-outline"></ion-icon></button>
+          <p class="likes"></p>
+        </div>
+        <div id="dislike-button" class="likeDislike__dislike">
+          <button><ion-icon name="thumbs-down-outline"></ion-icon></button></button>
+          DISLIKE
+        </div>
+      </div>
+      <div class="bar-wrapper">
+        <div class="likeBar"></div>
+        <div class="disLikeBar"></div>
+     </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
