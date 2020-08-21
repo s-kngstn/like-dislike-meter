@@ -1,38 +1,48 @@
-// let hello = 'hello, your javascript is working fine';
-
-// console.log(hello);
-
 const like = document.getElementById('like-button');
 const dislike = document.getElementById('dislike-button');
-let likes = document.querySelector('.likes');
-// let likeBar = document.querySelector('.likeBar'); <-- not working
+const likeBar = document.getElementById('likeBar');
+const disLikeBar = document.getElementById('disLikeBar');
+const likesNum = document.getElementById('likesNum');
+const disLikesNum = document.getElementById('disLikesNum');
 
-let likeCount = 0;
-let dislikeCount = 0;
-likes.textContent = '';
+let likeCount = 30;
+let disLikeCount = 30;
 
-like.addEventListener('click', function (e) {
-  likeCount++;
-  dislikeCount--;
+let likeNumCount = 1;
+let disLikeNumCount = 1;
 
-  // likeBar.style.color = 'red'; <-- isnt working
+
+
+like.addEventListener('click', function () {
+  
+  likeBar.style.width = `${likeCount++}rem`;
+  disLikeBar.style.width = `${disLikeCount--}rem`;
+
+  likeBar.style.borderColor = '#6fa5e4';
+  disLikeBar.style.borderColor = '#1f79ad';
+  
+  likesNum.textContent = likeNumCount++;
+  
 
   console.log(likeCount);
-  console.log(dislikeCount);
+  console.log(disLikeCount);
   console.log('clicked like');
-
-  // if (dislikeCount < 0) { <-- This isnt working
-  //   dislikeCount = 0;
-  // }
 });
 
-dislike.addEventListener('click', function (e) {
-  dislikeCount++;
-  likeCount--;
+dislike.addEventListener('click', function () {
+  
+  disLikeBar.style.width = `${disLikeCount++}rem`;
+  likeBar.style.width = `${likeCount--}rem`;
 
-  console.log(dislikeCount);
+  disLikeBar.style.borderColor = '#6fa5e4';
+  likeBar.style.borderColor = '#1f79ad';
+
+  disLikesNum.textContent = disLikeNumCount++;
+
+
+  console.log(disLikeCount);
   console.log(likeCount);
   console.log('clicked dislike');
 });
 
-likes.textContent = likeCount;
+
